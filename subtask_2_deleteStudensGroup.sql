@@ -3,16 +3,16 @@ DROP TABLE IF EXISTS "STUDENTS", "GROUPS", "COURSES", "STUDENTS_COURSES" CASCADE
 
 -- Create tables
 CREATE TABLE "GROUPS"(
-	"GROUP_ID"		integer 		PRIMARY KEY,
-	"NAME"			varchar(25)		NOT NULL,
+	"GROUP_ID"      integer 		PRIMARY KEY,
+	"NAME"          varchar(25)		NOT NULL,
 	CONSTRAINT group_pk CHECK ("GROUP_ID" > 0)
 );
 
 CREATE TABLE "STUDENTS"(
-	"STUDENT_ID" 	integer			PRIMARY KEY,
-	"GROUP_ID" 		integer 		REFERENCES "GROUPS",
-	"FIRST_NAME"	varchar(25)		NOT NULL,
-	"LAST_NAME"		varchar(25)		NOT NULL,
+	"STUDENT_ID"    integer			PRIMARY KEY,
+	"GROUP_ID"      integer 		REFERENCES "GROUPS",
+	"FIRST_NAME"    varchar(25)		NOT NULL,
+	"LAST_NAME"     varchar(25)		NOT NULL,
 	CONSTRAINT students_pk CHECK ("STUDENT_ID" > 0)
 );
 
