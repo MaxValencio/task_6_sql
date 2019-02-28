@@ -9,10 +9,10 @@ CREATE TABLE "GROUPS"(
 );
 
 CREATE TABLE "STUDENTS"(
-	"STUDENT_ID" 	integer 		PRIMARY KEY,
-	"GROUP_ID" 		integer 		REFERENCES "GROUPS",
-	"FIRST_NAME"	varchar(25)		NOT NULL,
-	"LAST_NAME"		varchar(25)		NOT NULL,
+	"STUDENT_ID"    integer 		PRIMARY KEY,
+	"GROUP_ID"      integer 		REFERENCES "GROUPS",
+	"FIRST_NAME"    varchar(25)		NOT NULL,
+	"LAST_NAME"     varchar(25)		NOT NULL,
 	CONSTRAINT students_pk CHECK ("STUDENT_ID" > 0)
 );
 
