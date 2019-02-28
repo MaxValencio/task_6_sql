@@ -3,8 +3,8 @@ DROP TABLE IF EXISTS "STUDENTS", "GROUPS", "COURSES", "STUDENTS_COURSES" CASCADE
 
 -- Create tables
 CREATE TABLE "GROUPS"(
-	"GROUP_ID"		integer 		PRIMARY KEY,
-	"NAME"			varchar(25)		NOT NULL,
+	"GROUP_ID"      integer 		PRIMARY KEY,
+	"NAME"          varchar(25)		NOT NULL,
 	CONSTRAINT group_pk CHECK ("GROUP_ID" > 0)
 );
 
