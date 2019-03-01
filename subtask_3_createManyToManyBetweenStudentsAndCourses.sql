@@ -67,7 +67,7 @@ INSERT INTO "COURSES" VALUES(4, 'JavaScript', 'Basic');
 
 --Create many-to-many relation
 CREATE TABLE "STUDENTS_COURSES" (
-    "STUDENT_ID"    integer,
+    "STUDENT_ID"    integer		PRIMARY KEY,
     "COURSE_ID"     integer,
     FOREIGN KEY("STUDENT_ID") REFERENCES "STUDENTS"("STUDENT_ID"),
     FOREIGN KEY("COURSE_ID") REFERENCES "COURSES"("COURSE_ID")
